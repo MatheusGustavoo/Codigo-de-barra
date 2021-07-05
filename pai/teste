@@ -1,0 +1,13 @@
+function verificar() {
+  let codigo = document.querySelector("#certo-texto").value;
+  let resposta = document.querySelector(".resposta1 h1");
+  let copiado = document.querySelector(".copiado");
+  let teste = codigo.slice(230, 289);
+  copiado.innerText = teste;
+}
+const botao = document.querySelector("#copiado");
+botao.addEventListener("click", () => {
+  let copiado = document.querySelector(".copiado");
+  copiado.select();
+  document.execCommand("copy");
+});
